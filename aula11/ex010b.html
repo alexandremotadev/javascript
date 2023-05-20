@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IMIGRAÇÃO</title>
+</head>
+
+<body>
+  <h1>Sistema de imigração</h1>  
+  País de origem: <input type="text" name="nacio" id="nacio"> 
+  <input type="button" value="Verificar" onclick="verificarNacionalidade()">
+  <div id="res">
+
+  </div>
+</body>
+
+<script>
+   function verificarNacionalidade() {
+    var nac = window.document.querySelector('input#nacio')
+    var res = window.document.querySelector('div#res')
+    res.innerHTML = `<p>Seu país é o (a) ${nac.value}.</p>`
+      // se não colocasse .value depois de nac, da o erro "object HTMLInputElement"
+      if(nac.value != 'Brasil') {
+        res.innerHTML += '<p>Você é estrangeiro.</p>'
+      } else {
+        res.innerHTML = '<p>Você é brasileiro.</p>'
+      }
+      res.innerHTML += `<p><strong>Seja bem vindo</strong>!</p>`
+    }
+      
+</script>
+
+</html>
