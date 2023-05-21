@@ -11,8 +11,10 @@ function verificar(){
     var fsex = document.getElementsByName('radsex')
     var idade = ano - Number(fano.value) // ano atual - valor digitado em fano
     var genero = ''
+    // inserir img sem ter a tag <img> criada no HTML
     var img = document.createElement('img')
     img.setAttribute('id','foto')
+   
     if (fsex[0].checked) {
       genero = 'Homem'
       if (idade >= 0 && idade < 18) {
