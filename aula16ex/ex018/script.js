@@ -59,6 +59,14 @@ function finalizar() {
       if (valores[pos] < menor)
         menor = valores [pos]
     }
+
+    /* 
+
+    Outra forma de achar maior e menor numero do array:
+    var maior_numero = Math.max.apply(null, numeros); // Obtém o maior número do array numeros
+        
+    var menor_numero = Math.min.apply(null, numeros); // Obtém o menor número do array numeros
+    */
     media = soma / tot
     res.innerHTML = '' // zerar valor de res
     res.innerHTML += `<p> Ao todo temos ${tot} números cadastrados.</p>`
